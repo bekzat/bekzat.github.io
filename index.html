@@ -1,10 +1,526 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-	<title>Matrix text effect</title>
-	<link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Старые программы и игры для Windows</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+            background-color: #341703; /* Коричневый фон для всего сайта */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #023606;
+            color: #fff;
+            padding: 2px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header img {
+            width: 60px; /* Размер смайлика теперь 60px */
+            height: 60px; /* Пропорциональный размер */
+            margin-right: 5px; /* Отступ справа */
+        }
+
+        footer {
+            background-color: #290549;
+            color: #fff;
+            padding: 2px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .container {
+            padding: 2px; /* Маленькие отступы */
+            margin-top: 40px;
+            margin-bottom: 40px;
+            flex: 1;
+            background-color: transparent; /* Прозрачный фон для контейнера */
+        }
+
+        h2 {
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .programs-games-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .programs, .games {
+            width: 48%;
+            margin-bottom: 2px;
+            background-color: transparent; /* Убираем фон у колонок */
+        }
+
+        .programs h3, .games h3 {
+            text-align: center; /* Центрируем заголовки колонок */
+            color: #ffffff;
+        }
+
+        .program-item {
+            background-color: #fff; /* Белый фон для элементов */
+            padding: 2px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 2px;
+            display: flex;
+            justify-content: space-between; /* Разделяем элементы: иконка + название слева, кнопка справа */
+            align-items: center;
+            padding: 2px;
+        }
+
+        .program-item img {
+            width: 15px; /* Иконка теперь размером с шрифт */
+            height: 15px; /* Пропорциональный размер */
+            margin-right: 5px; /* Отступ справа от иконки */
+        }
+
+        .program-item span {
+            font-size: 15px; /* Размер шрифта */
+        }
+
+        .program-item a {
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+            margin-right: 2px;
+            padding: 2px 0;
+        }
+
+        .program-item button {
+            font-size: 12px;
+            padding: 2px 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .program-item button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .programs, .games {
+                width: 100%;
+            }
+            header {
+                padding: 2px;
+            }
+            h2 {
+                font-size: 14px;
+                margin-bottom: 2px;
+            }
+            .program-item {
+                font-size: 14px;
+                padding: 2px;
+                height: auto;
+            }
+            .program-item button {
+                font-size: 12px;
+                padding: 2px 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 18px;
+            }
+            h2 {
+                font-size: 14px;
+            }
+            .program-item {
+                font-size: 12px;
+                padding: 2px;
+            }
+            .program-item button {
+                font-size: 11px;
+                padding: 2px 5px;
+            }
+        }
+    </style>
 </head>
 <body>
-	<script src="app.js"></script>
+    <header>
+        <img src="https://dwweb.ru/__img/smaile/cofee.gif" alt="dw_smiley">
+        <h1>Программы и игры для Windows и т.д.</h1>
+    </header>
+
+    <div class="container">
+        <h2>?????</h2>
+        <div class="programs-games-list">
+            <div class="programs">
+                <h3>Программы</h3>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Программа 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+            </div>
+
+            <div class="games">
+                <h3>Игры</h3>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 1</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 2</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 3</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+                <div class="program-item">
+                    <div style="display: flex; align-items: center;">
+                        <img src="https://via.placeholder.com/15" alt="Icon">
+                        <span>Игра 4</span>
+                    </div>
+                    <a href="#"> <button>Скачать</button> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Программы и игры для Windows и т.д.</p>
+    </footer>
 </body>
 </html>
